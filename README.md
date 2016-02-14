@@ -8,10 +8,11 @@ import Broadcaster from 'redux-server-broadcaster';
 const broadcaster = new Broadcaster();
 
 broadcaster.setNewConnectionListener((connection) => {
-  // optional place for additional logic for handling new connection
+  // optional place for handling additional 'new connection' logic
 });
 broadcaster.setNewActionListener((connection, data) => {
-  // optional place for additional logic for handling new action, e.g. all actions could be saved, and later broadcasted to any client (setNewConnectionListener)
+  // optional place for handling additional incoming action logic
+  // e.g. all actions could be saved, and later broadcasted to any new client (within setNewConnectionListener)
 });
 
 broadcaster.listen(3001);
