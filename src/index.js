@@ -1,1 +1,5 @@
-export { Broadcaster } from './lib/Broadcaster';
+import Broadcaster from './lib/Broadcaster';
+
+export {
+  Broadcaster
+};
